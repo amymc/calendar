@@ -1,6 +1,6 @@
 /*global BackboneCalendar, Backbone*/
 
-BackboneCalendar.Collections = BackboneCalendar.Collections || {};
+/*BackboneCalendar.Collections = BackboneCalendar.Collections || {};
 
 (function () {
     'use strict';
@@ -12,3 +12,4 @@ BackboneCalendar.Collections = BackboneCalendar.Collections || {};
     });
 
 })();
+*/

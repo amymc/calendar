@@ -1,8 +1,8 @@
 /*global BackboneCalendar, Backbone, JST*/
 
-BackboneCalendar.Views = BackboneCalendar.Views || {};
+//BackboneCalendar.Views = BackboneCalendar.Views || {};
 
-(function () {
+/*(function () {
     'use strict';
 
     BackboneCalendar.Views.EventsView = Backbone.View.extend({
@@ -14,18 +14,18 @@ BackboneCalendar.Views = BackboneCalendar.Views || {};
         id: 'calendar',
 
         className: '',
-        
+
         el: '#calendar',
 
         events: {},
 
         initialize: function () {
             _.bindAll(this, this.render);
-
-            this.collection.bind('reset', this.addAll);
+            this.model.bind('change', this.render);
+          //  this.collection.bind('reset', this.addAll);
         },
-        
-        
+
+
 
         render: function () {
            this.el.fullCalendar({
@@ -43,7 +43,8 @@ BackboneCalendar.Views = BackboneCalendar.Views || {};
         addAll: function(){
             this.el.fullCalendar('addEventSource', this.collection.toJSON());
         }
-           
+
     });
-    
+
 })();
+*/

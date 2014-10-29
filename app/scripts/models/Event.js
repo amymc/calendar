@@ -1,8 +1,8 @@
 /*global BackboneCalendar, Backbone*/
 
-BackboneCalendar.Models = BackboneCalendar.Models || {};
+//BackboneCalendar.Models = BackboneCalendar.Models || {};
 
-(function () {
+/*(function () {
     'use strict';
 
     BackboneCalendar.Models.Event = Backbone.Model.extend({
@@ -10,11 +10,12 @@ BackboneCalendar.Models = BackboneCalendar.Models || {};
         initialize: function() {
             console.log(JSON.stringify(this));
         },
-        
+
         summary: function() {
             return this.get('title') + this.get('date');
         }
-        
+
     });
 
 })();
+*/

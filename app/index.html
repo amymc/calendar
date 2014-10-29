@@ -21,35 +21,41 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
         <div class="container">
             <div class="header">
                 <h3 class="text-muted">BackboneCalendar</h3>
             </div>
 
-            <div class="row marketing">
-                <div class="col-lg-6">
-                   <div id='calendar'></div>
-                   <div id='eventDialog' class='dialog ui-helper-hidden'>
-                         <form>
-                             <div>
-                                 <label>Title:</label>
-                                 <input id='title' class="field" type="text"></input>
-                             </div>
-                             <div>
-                                 <label>Color:</label>
-                                 <input id='color' class="field" type="text"></input>
-                             </div>
-                         </form>
-                     </div>
-                </div>
-            </div>
+            <div id="events">
+                <div id='calendar'></div>
 
-            <div class="footer">
-            </div>
+                <form id="addEvent" action="#">
+                    <div>
+                       <label for="title">Title: </label><input id="title" type="text" />
+                       <label for="start">Date: </label><input id="start" type="text" />
+                       <button id="add">Add</button>
+                    </div>
+                </form>
 
-        </div>
-        
+             </div><!--/#events-->
+
+            <div class="eventContainer">
+                <ul>
+                    <li>Title</li>
+                    <li>Date</li>
+                </ul>
+            </div><!--/.eventContainer-->
+            <script id="eventTemplate" type="text/template">
+                <ul>
+                    <li><%= title %></li>
+                    <li><%= start %></li>
+                </ul>
+            </script>
+
+            <div class="footer"></div>
+
+        </div><!--/.container--> 
+
         <!-- build:js scripts/vendor.js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/lodash/dist/lodash.compat.js"></script>
@@ -81,5 +87,6 @@
         <script src="scripts/collections/events.js"></script>
         <script src="scripts/views/EventsView.js"></script>
         <!-- endbuild -->
+
 </body>
 </html>
